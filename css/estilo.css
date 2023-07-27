@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Kaushan+Script&family=Montserrat:wght@500;700&family=Oxanium:wght@300;400;700&family=Ubuntu:ital,wght@1,300;1,400;1,500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+}
+
+:root{
+    --dark-cyan:  #3c8067;
+    --cream: #f2ebe3;
+    --very-dark-blue: #1c232b;
+    --dark-grayish-blue: #6c7289;
+    --white: #ffffff;
+}
+
+.fraunces{
+    font-family: 'Fraunces', serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+}
+
+.container{
+    width: 600px;
+    height: 450px;
+    background-color: var(--white);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .imagem{
+    width: 50%;
+}
+
+.container .imagem img{
+    width: 100%;
+    display: block;
+}
+
+.container .imagem img.mobile{
+    display: none;
+}
+
+.container .card{
+    width: 50%;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .card h6{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.container .card h1{
+    color: var(--very-dark-blue);
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+
+.container .card p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.container .card h2{
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--dark-cyan);
+}
+
+.container .card h2 span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: line-through;
+    color: var(--dark-cyan);
+}
+
+.container .card a{
+    display: block;
+    line-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    border-radius: 8px;
+    margin-top: 26px;
+    transition-duration: 200ms;
+}
+
+.container .card a:hover{
+    background-color: #1A4031;
+}
+
+.container .card a img{
+    display: block;
+}
+
+
+@media only screen and (max-width: 600px){
+    body{
+        height: auto;
+        padding: 28px 16px;
+    }
+    
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .imagem{
+        width: 100%;
+    }
+    
+    .container .imagem img.desktop{
+        display: none;
+    }
+
+    .container .imagem img.mobile{
+        display: block;
+    }
+    .container .card{
+        width: 100%;
+        padding: 25px;
+    }
+}
